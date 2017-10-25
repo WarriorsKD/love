@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after{
+    /*所有的标签，和伪元素都选中*/
+    margin: 0;
+    padding: 0;
+    /*移动端常用布局是非固定像素*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body,ul,li,h1,h2,h3,h4,h5,h6,p,a,input,dl,dt,dd,ol,form{
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     list-style-type: none;
+     font-family: microsoft yahei;
+ }
+input {
+    border: 0 none;
+    outline-style: none;
+}
+.w {
+    width: 1000px;
+}
+.clearfix::after {
+    content: '.';
+    display: block;
+    line-height: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}

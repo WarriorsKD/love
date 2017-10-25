@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+  <title>哈哈,我又变帅了</title>
+  <style>
+    *,
+    *::before,
+    *::after{
+      /*所有的标签，和伪元素都选中*/
+      margin: 0;
+      padding: 0;
+      /*移动端常用布局是非固定像素*/
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background: url("img2/00_05.jpg");
+    }
+
+    #mask {
+      background-color: rgba(255, 255, 255, 0.3);
+      height: 200px;
+      text-align: center;
+    }
+
+    #mask img {
+      width: 200px;
+      margin-top: 35px;
+      cursor: pointer;
+    }
+    .text {
+      width: 50px;
+      height: 20px;
+    }
+
+  </style>
+  <!--[if lte IE 11]>
+  <h1>请使用谷歌或火狐浏览器打开！！！IE都是渣</h1>
+  <![endif]-->
+
+</head>
+<body id="bd">
+<div id="mask">
+  <img src="img2/00_08.jpg" alt="">
+  <p>点击图片有惊喜</p>
+  <img src="img2/00_05.jpg" alt="">
+  <img src="img2/00_12.jpg" alt="">
+</div>
+<div class="text">
+  <a href="text.html"><p>点我进入祝福语</p></a>
+</div>
+<audio src="赵紫骅%20-%20可乐.mp3" autoplay  loop></audio>
+<script src="js/common1.js"></script>
+<script>
+  //  //获取所有的img标签
+//    var imgs=my$("mask").children;
+//    //遍历所有的img标签,注册点击事件
+//    for(var i=0;i<imgs.length;i++){
+//      imgs[i].onclick=function () {
+//        //设置body应用背景图片
+//        document.body.style.backgroundImage="url("+this.src+")";
+//      };
+//    }
+
+  //获取所有的img标签
+  var imgs = my$("mask").children;
+  //遍历所有的img标签,注册点击事件
+  for (var i = 0; i < imgs.length; i++) {
+    imgs[i].onclick = clickHandle;
+
+  }
+  function clickHandle() {
+    //设置body应用背景图片
+    document.body.style.backgroundImage = "url(" + this.src + ")";
+  }
+  function time(){
+    alert("我爱你.");
+  }setInterval("time()",10000);
+
+</script>
+
+
+</body>
+</html>

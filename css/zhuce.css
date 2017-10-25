@@ -1,0 +1,241 @@
+body {
+    height: 480px;
+    background-color: #fdfbfe;
+}
+
+.box {
+    width: 1400px;
+    background-color: #fdfbfe;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+}
+
+.header div:nth-child(1) a {
+    display: inline-block;
+    width: 315px;
+    height: 50px;
+    background: url("../images/images/zhuce.png");
+    margin-left: 218px;
+    margin-top: -50px;
+}
+
+.header div:nth-child(2) {
+    margin-right: 110px;
+    margin-top: -21px;
+    width: 445px;
+    height: 40px;
+    display: inline-block;
+    background: url("../images/images/zhuce.png") 0 -69px;
+}
+
+.logo {
+    height: 500px;
+    margin-left: 230px;
+    overflow: hidden;
+}
+
+.logo_con {
+    height: 458px;
+    margin: 79px -48px;
+    background: url("../images/images/15040995510145.jpg") no-repeat;
+}
+
+.logo_bar {
+    width: 335px;
+    height: 458px;
+}
+
+.logo_bar span:first-child {
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    color: #4c4c4c;
+}
+
+.logo_bar span:nth-child(2) {
+    font-size: 12px;;
+    font-family: "microsoft yahei";
+    padding-left: 108px;
+    /*color: #065177;*/
+}
+
+.logo_bar strong {
+    font-size: 14px;
+    font-family: "microsoft yahei";
+    color: #f454a1;
+}
+
+.username input {
+    padding-left: 10px;
+    margin-top: 25px;
+    height: 35px;
+    width: 268px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+}
+
+.phoneNumber{
+    position: absolute;
+}
+.phoneNumber span{
+    margin-left: -95px;
+}
+.mimanumber {
+    position: absolute;
+}
+.querenmima {
+    position: absolute;
+}
+.duanXinyanzheng {
+    position: absolute;
+}
+#phone {
+    background-color: #e7f9ff;
+    position: absolute;
+    top: -13px;
+    left: 0px;
+    width: 162px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+    border: 1px solid #91daf2 ;
+}
+#mimaNumber {
+    background-color: #e7f9ff;
+    position: absolute;
+    top: -13px;
+    left: 0px;
+    width: 278px;
+    height: 37px;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+    border: 1px solid #91daf2 ;
+}
+#querenMima {
+    background-color: #e7f9ff;
+    position: absolute;
+    top: -13px;
+    left: 0px;
+    width: 162px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+    border: 1px solid #91daf2 ;
+}
+.duanXinma{
+    background-color: #e7f9ff;
+    position: absolute;
+    top: -13px;
+    left: 0px;
+    width: 162px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+    border: 1px solid #91daf2 ;
+}
+
+.pwd input, .pwdrest input {
+    padding-left: 10px;
+    height: 35px;
+    width: 268px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+}
+
+.duanxin input {
+    padding-left: 10px;
+    height: 35px;
+    width: 135px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+}
+
+.duanxin input:nth-child(2) {
+    height: 37px;
+    width: 118px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 15px;
+    padding-left: 0;
+    background-color: #d0d0d0;
+    color: #999;
+}
+
+.zhuce {
+    position: relative;
+    height: 100px;
+    width: 280px;
+}
+
+.zhuce input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 148px;
+    border-radius: 7px;
+    background-color: #f10180;
+    color: white;
+    font-size: 18px;
+    padding-right: 11px;
+}
+.zhuce input:hover{
+    background-color: #f43499;
+}
+
+.zhuce span {
+    position: absolute;
+    right: -17px;
+    top: 50px;
+    display: inline-block;
+    color: #065177;
+}
+
+.gouxuan {
+    background: url("../images/images/tubiao.png") -48px 0;
+    display: inline-block;
+    width: 19px;
+    height: 16px;
+}
+
+.tiaokuan p {
+    width: 315px;
+    font-size: 12px;
+}
+
+.tiaokuan a {
+    display: inline;
+    color: red;
+    font-size: 8px;
+}
+.tiaokuan a:hover {
+    color: #f43499;
+}
+
+.footer {
+    font-size: 13px;
+    color: #767074;
+    margin: 160px 130px 50px 450px;
+}
+.p1 {
+    color:  #4c4c4c;
+}
+
+
+
+
+
+
+

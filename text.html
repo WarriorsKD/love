@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+  <title></title>
+  <style>
+    *,
+    *::before,
+    *::after{
+      /*所有的标签，和伪元素都选中*/
+      margin: 0;
+      padding: 0;
+      /*移动端常用布局是非固定像素*/
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    body {
+      margin: 0 auto;
+      padding: 0px;
+      font-size: 12px;
+      background: url("img2/bg.gif") repeat center 36px;
+
+      text-align: center;
+      background-color: #c30230;
+    }
+
+    #content {
+      margin: 0 auto;
+      width: 960px;
+      background: url(img2/content_bg.jpg) no-repeat left top;
+      height: 627px;
+    }
+
+    #content .tip1, #content .tip2, #content .tip3, #content .tip4, #content .tip5, #content .tip6, #content .tip7, #content .tip8 {
+      position: absolute;
+      width: 227px;
+      left: 200px;
+      top: 100px;
+    }
+
+    #content .tip1 .tip_h {
+      background: url(img2/tip1_h.gif) no-repeat left top;
+    }
+
+    #content .tip1 .tip_h, #content .tip2 .tip_h, #content .tip3 .tip_h, #content .tip4 .tip_h, #content .tip5 .tip_h, #content .tip6 .tip_h, #content .tip7 .tip_h, #content .tip8 .tip_h {
+      width: 227px;
+      padding-top: 45px;
+      height: 23px;
+      text-align: left;
+      cursor: move;
+    }
+
+    #content .tip1 .tip_c {
+      background: url(img2/tip1_c.gif) repeat-y;
+    }
+
+    #content .tip1 .tip_c, #content .tip2 .tip_c, #content .tip3 .tip_c, #content .tip4 .tip_c, #content .tip5 .tip_c, #content .tip6 .tip_c, #content .tip7 .tip_c, #content .tip8 .tip_c {
+      width: 200px;
+      padding-left: 12px;
+      padding-right: 15px;
+      min-height: 40px;
+      text-align: left;
+      line-height: 20px;
+      max-height: 160px;
+      word-wrap: break-word;
+      word-break: break-all;
+      overflow: hidden;
+    }
+
+    #content .tip1 .tip_f {
+      background: url(img2/tip1_f.gif) no-repeat left top;
+    }
+
+    #content .tip1 .tip_f, #content .tip2 .tip_f, #content .tip3 .tip_f, #content .tip4 .tip_f, #content .tip5 .tip_f, #content .tip6 .tip_f, #content .tip7 .tip_f, #content .tip8 .tip_f {
+      width: 227px;
+      height: 53px;
+      padding-top: 20px;
+    }
+
+    #content .close, #content .close2 {
+      float: left;
+      font-size: 12px;
+      cursor: pointer;
+      color: #000000;
+    }
+
+    .clr {
+      clear: both;
+      overflow: auto;
+      display: block;
+      height: 0px;
+    }
+
+    #content .icon {
+      float: left;
+      width: 35px;
+      padding-left: 15px;
+      height: 35px;
+      text-align: center;
+    }
+
+    #content .name {
+      float: right;
+      padding-right: 15px;
+      text-align: right;
+      font-size: 14px;
+      line-height: 35px;
+      color: #C0F;
+    }
+
+    #content .num {
+      float: left;
+      padding-left: 7px;
+      width: 195px;
+    }
+    .one {
+      font-size: 20px;
+    }
+  </style>
+
+  <!--[if lte IE 11]>
+  <h1>请使用谷歌或火狐浏览器打开！！！IE都是渣</h1>
+  <![endif]-->
+
+</head>
+<body>
+<div id="content">
+  <a class="one" href="index.html"><p>点击有福利</p></a>
+</div>
+<audio src="C400004641f741WARc.m4a" autoplay  loop></audio>
+
+<script src="js/common1.js"></script>
+<script>
+  var messages = [
+    {"id": 1, "name": "阿珅.", "content": "2016.10.22.00.00", "time": "2016-10-23 "},
+    {"id": 2, "name": "阿珅.", "content": "第一个三十天，我们都很好", "time": "2016-11-23 "},
+    {"id": 3, "name": "阿珅.", "content": "今天，是我们在一起的第六十天，风里雨里，不离不弃", "time": "2016-12-21 "},
+    {"id": 4, "name": "阿珅.", "content": "《2017-篇章》，在一起真好", "time": "2017-01-01 "},
+    {"id": 5, "name": "阿珅.", "content": "5.21 刚刚好", "time": "2017-01-20 "},
+    {"id": 6, "name": "阿珅.", "content": "第一个100天，整个世界都是你，致我们家爱卖萌的阿潘小公主 珅哥 执笔", "time": "2017-01-30 "},
+    {"id": 7, "name": "阿珅.", "content": "我们家的阿潘宝贝", "time": "2017-01-30 "},
+    {"id": 8, "name": "阿珅.", "content": "一周年快乐", "time": "2017-10-22 "}
+
+
+
+  ];
+
+  //先获取最外面的div----content
+  var content = my$("content");
+  //遍历数组创建div(每个便签的壳,立刻加入到content中)
+  for (var i = 0; i < messages.length; i++) {
+    //获取每个数组元素对象
+    var dt=messages[i];
+    //创建div
+    var dvObj = document.createElement("div");
+    //加入到content中
+    content.appendChild(dvObj);
+    //设置id和类样式
+    dvObj.id = "cc" + i;
+    dvObj.className = "tip1";
+
+    dvObj.innerHTML='<div class="tip_h" title="双击关闭纸条">' +
+        '<div class="num">第['+dt.id+']条 '+dt.time+'</div>' +
+        '<div class="close" title="关闭纸条">×</div>' +
+        '<div class="clr"></div>' +
+        '</div>' +
+        '<div class="tip_c">'+dt.content+'</div>' +
+        '<div class="tip_f">' +
+        '<div class="icon">' +
+        '<img src="img2/bpic_1.gif" alt="" title="">' +
+        '</div>' +
+        '<div class="name">'+dt.name+'</div>' +
+        '<div class="clr"></div>' +
+        '</div>';
+
+    //设置每个div的left和top属性值(随机的)
+    var x = parseInt(Math.random() * 600 + 300);
+    //top竟然是个window-----注意了-----
+    var y = parseInt(Math.random() * 300 + 100);
+    //console.log(x,y);
+    dvObj.style.left = x + "px";
+    dvObj.style.top = y + "px";
+
+
+    //div中有没有x
+    //每个便签中的关闭的x
+    dvObj.getElementsByClassName("close")[0].onclick=function () {
+      this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+    };
+    //双击关闭纸条
+    dvObj.getElementsByClassName("tip_h")[0].ondblclick=function () {
+      this.parentNode.parentNode.removeChild(this.parentNode);
+    };
+    //点击纸条,改变层级
+    dvObj.onclick=clickHandle;
+
+  }
+  var zIndex=0;//改变层级
+  function clickHandle() {
+    zIndex++;
+    this.style.zIndex=zIndex;
+
+  }
+
+
+          function time(){
+            alert("我爱你.");
+          }setInterval("time()",10000);
+</script>
+
+
+
+
+  //console.log(window);
+
+
+</body>
+</html>
